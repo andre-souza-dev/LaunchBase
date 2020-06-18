@@ -1,0 +1,1 @@
+[{"name":"Mariana","transactions":[{"type":"credit","value":50},{"type":"credit","value":120},{"type":"debit","value":80},{"type":"debit","value":30}],"balance":60}]

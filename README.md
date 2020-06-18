@@ -9,7 +9,7 @@
 - [x] 1. [Desafio 1.1 - Variáveis, condicionais e operadores](/Aulas/Desafio.1-1)
 - [x] 2. [Desafio 1.2 - Objetos e Vetores](/Aulas/Desafio.1-2)
 - [x] 3. [Desafio 1.3 - Funções e estruturas de repetição](/Aulas/Desafio.1-3)
-- [ ] 4. Desafio 1.4 - Aplicação: Operações bancárias
+- [x] 4. [Desafio 1.4 - Aplicação: Operações bancárias](/Aulas/Desafio.1-4)
 
 ## Módulo 2 - Introdução ao Front-End
 
