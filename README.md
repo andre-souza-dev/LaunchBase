@@ -6,14 +6,14 @@
 
 ## Módulo 1 - Introdução à programação WEB
 
-- [x] 1. [Desafio 1.1 - Variáveis, condicionais e operadores](/Aulas/Desafio.1-1)
-- [x] 2. [Desafio 1.2 - Objetos e Vetores](/Aulas/Desafio.1-2)
-- [x] 3. [Desafio 1.3 - Funções e estruturas de repetição](/Aulas/Desafio.1-3)
-- [x] 4. [Desafio 1.4 - Aplicação: Operações bancárias](/Aulas/Desafio.1-4)
+- [x] 1. [Desafio 1.1 - Variáveis, condicionais e operadores](/LaunchBase/Aulas/Desafio.1-1)
+- [x] 2. [Desafio 1.2 - Objetos e Vetores](/LaunchBase/Aulas/Desafio.1-2)
+- [x] 3. [Desafio 1.3 - Funções e estruturas de repetição](/LaunchBase/Aulas/Desafio.1-3)
+- [x] 4. [Desafio 1.4 - Aplicação: Operações bancárias](/LaunchBase/Aulas/Desafio.1-4)
 
 ## Módulo 2 - Introdução ao Front-End
 
-- [x] 1. [Desafio 2.1 - Primeiro HTML](/Aulas/Desafio.2-1)
+- [x] 1. [Desafio 2.1 - Primeiro HTML](/LaunchBase/Aulas/Desafio.2-1)
 - [ ] 2. Desafio 2.2 - Página de Descrição
 - [ ] 3. Desafio 2.3 - Página de Cursos e Iframe
 - [ ] 4. Desafio 2.4 - Foodfy (Site de Receitas no qual utilizamos Modal-Overlay e Iframe)
