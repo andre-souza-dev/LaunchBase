@@ -16,7 +16,7 @@
 - [x] 1. [Desafio 2.1 - Primeiro HTML](/LaunchBase/Aulas/Desafio.2-1)
 - [x] 2. [Desafio 2.2 - Página de Descrição](/LaunchBase/Aulas/Desafio.2-2)
 - [x] 3. [Desafio 2.3 - Página de Cursos e Iframe](/LaunchBase/Aulas/Desafio.2-3)
-- [ ] 4. Desafio 2.4 - Foodfy (Site de Receitas no qual utilizamos Modal-Overlay e Iframe)
+- [x] 4. [Desafio 2.4 - Foodfy (Site de Receitas no qual utilizamos Modal-Overlay e Iframe)](/LaunchBase/Aulas/Desafio.2-4)
 
 ## Módulo 3 - Introdução ao Back-End
 
