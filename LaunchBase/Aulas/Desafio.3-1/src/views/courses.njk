@@ -1,0 +1,60 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+
+		<title>Desafio 3-1 - Cursos</title>
+{% endblock %}
+
+{% block main %}
+   <section class="courses">
+				<div class="course" id="starter">
+					<div>
+						<img src="/starter.svg" alt="starter" />
+						<h1>Starter</h1>
+						<h2>CURSOS</h2>
+					</div>
+					<div class="course-description">
+						<span>Módulos</span><span>05</span> <span>Custo</span
+						><span>Gratuito</span>
+					</div>
+				</div>
+				<div class="course" id="launchbase">
+					<div>
+						<img src="/launchbase.svg" alt="LaunchBase" />
+						<h1>LaunchBase</h1>
+						<h2>BOOTCAMP</h2>
+					</div>
+					<div class="course-description">
+						<span>Módulos</span><span>16</span> <span>Custo</span
+						><span>Pago</span>
+					</div>
+				</div>
+				<div class="course" id="gostack">
+					<div>
+						<img src="/gostack.svg" alt="GoStack" />
+						<h1>GoStack</h1>
+						<h2>BOOTCAMP</h2>
+					</div>
+					<div class="course-description">
+						<span>Módulos</span><span>20</span> <span>Custo</span
+						><span>Pago</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="modal hidden">
+				<div class="modal__icons">
+					<span class="material-icons" id="maximize">maximize</span>
+					<span class="material-icons" id="close">close</span>
+				</div>
+				<iframe src="" frameborder="0"></iframe>
+			</section>
+{% endblock %}
+
+{% block script %}
+<script src="script.js"></script>
+{% endblock %}
