@@ -1,0 +1,27 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+	<title>Desafio 3-3 - Cursos</title>
+{% endblock %}
+
+{% block main %}
+	<section class="courses">
+{% for course in coursesData %}
+	<div class="course" id="{{course.id}}">
+		<div>
+			<img src="{{course.image}}" alt="Imagem de {{course.title}}" />
+			<h1>{{course.title}}</h1>
+			<h2>{{course.subtitle}}</h2>
+		</div>
+		<div class="course-description">
+			<span>Módulos</span><span>{{course.modules}}</span>
+			<span>Custo</span><span>{{course.cost}}</span>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="script.js"></script>
+{% endblock %}

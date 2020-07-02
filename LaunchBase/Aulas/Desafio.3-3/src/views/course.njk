@@ -1,0 +1,27 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<title>Desafio 3-3 - Cursos</title>
+{% endblock %}
+
+{% block main %}
+	<section class="course">
+		<div>
+			<img src="{{course.image}}" alt="Imagem de {{course.title}}" />
+			<h1>{{course.title}}</h1>
+			<h2>{{course.subtitle}}</h2>
+		</div>
+		<div class="course-description">
+			<p class="one-row"> {{course.description}} </p>
+			<span>Módulos</span><span>{{course.modules}}</span> <span>Custo</span
+			><span>{{course.cost}}</span>
+		</div>
+		<button onClick="history.go(-1)"><i data-feather="arrow-left"></i></button>
+</section>
+{% endblock %}
+
+{% block script %}
+<script>feather.replace();</script>
+<script src="script.js"></script>
+{% endblock %}
