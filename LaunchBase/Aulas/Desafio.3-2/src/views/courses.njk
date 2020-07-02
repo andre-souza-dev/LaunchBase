@@ -1,0 +1,40 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+
+	<title>Desafio 3-1 - Cursos</title>
+{% endblock %}
+
+{% block main %}
+	<section class="courses">
+{% for course in coursesData %}
+	<div class="course" id="{{course.id}}">
+		<div>
+			<img src="{{course.image}}" alt="Imagem de {{course.title}}" />
+			<h1>{{course.title}}</h1>
+			<h2>{{course.subtitle}}</h2>
+		</div>
+		<div class="course-description">
+			<span>Módulos</span><span>{{course.modules}}</span> <span>Custo</span
+			><span>{{course.cost}}</span>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+
+<section class="modal hidden">
+	<div class="modal__icons">
+		<span class="material-icons" id="maximize">maximize</span>
+		<span class="material-icons" id="close">close</span>
+	</div>
+	<iframe src="" frameborder="0"></iframe>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="script.js"></script>
+{% endblock %}

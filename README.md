@@ -21,7 +21,7 @@
 ## Módulo 3 - Introdução ao Back-End
 
 - [x] 1. [Desafio 3.1 - Primeiro servidor](/LaunchBase/Aulas/Desafio.3-1)
-- [ ] 2. Desafio 3.2 - Nunjucks e dados dinâmicos
+- [x] 2. [Desafio 3.2 - Nunjucks e dados dinâmicos](/LaunchBase/Aulas/Desafio.3-2)
 - [ ] 3. Desafio 3.3 - Página de descrição de cursos
 - [ ] 4. Desafio 3.4 - Refatorando Foodfy (Adicionar a conexão com o backend)
 
