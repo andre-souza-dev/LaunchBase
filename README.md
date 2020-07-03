@@ -23,7 +23,7 @@
 - [x] 1. [Desafio 3.1 - Primeiro servidor](/LaunchBase/Aulas/Desafio.3-1)
 - [x] 2. [Desafio 3.2 - Nunjucks e dados dinâmicos](/LaunchBase/Aulas/Desafio.3-2)
 - [x] 3. [Desafio 3.3 - Página de descrição de cursos](/LaunchBase/Aulas/Desafio.3-3)
-- [ ] 4. Desafio 3.4 - Refatorando Foodfy (Adicionar a conexão com o backend)
+- [x] 4. [Desafio 3.4 - Refatorando Foodfy (Adicionar a conexão com o backend)](/LaunchBase/Aulas/Desafio.3-4)
 
 ## Módulo 4 - Controle de Academia
 

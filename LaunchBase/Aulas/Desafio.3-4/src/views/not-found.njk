@@ -1,0 +1,36 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+ <title>FoodFy - Não Encontrado</title>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div>
+                <h1>Desculpe, a página não foi encontrada</h1>
+            <div class="page404">
+                <img src="/404.svg" alt="not-found" srcset=""/>
+                <div class="wrapper">
+                    <h2>
+                        Mas, e agora?
+                    </h2>
+                    <p>
+                        Não há motivo para se preocupar!
+                        </p>
+                    <p>
+                        Talvez você tenha acessado o servidor por um link externo que não está mais disponível, neste caso talvez você queira <a href="/" class="link404">ir para página inicial
+            </a>.
+                    </p>
+                    <p>
+                        Ou estava navegando no site e clicou em um link que te levou aqui? Se for isso, <button onClick="history.go(-1)" class="link404">volte para a página anterior
+            </button>.
+                    </p>
+                    <p>
+                        De qualquer forma, sabemos que pode ser frustante este erro. Fique à vontade para entrar em contato a respeito no e-mail <a href="mailto:suporte@empresa.com.br?subject=erro 404 na rota {{ route }}" class="link404">suporte@empresa.com.br</a>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
