@@ -1,0 +1,62 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning</title>
+{% endblock %}
+
+{% block content %}
+<section class="home-description" id="teachersection" >
+	<div>
+		<h1>Ensine através da internet</h1>
+		<h2>
+			Torne-se um profissional reconhecido na área da educação oferecendo aulas on-line e presenciais.
+		</h2>
+	</div>
+	<img src="/teacher.png" alt="" />
+</section>
+<main>
+	<section class="cards">
+		<h1>Professores utilizando a plataforma e-Learning</h1>
+		{% for card in cards %}
+		<div class="card" id={{card.id}}>
+			<div class="avatar" style="background: url('{{card.avatarUrl}}')
+		no-repeat center center / cover;">
+			</div>
+			<div class="card-details">
+				<div class="item">
+					<div>Nome completo</div>
+					<div>{{card.name}}</div>
+				</div>
+				<div class="item">
+					<div>Idade</div>
+					<div>{{card.age}} anos</div>
+				</div>
+				<div class="item">
+					<div>Grau de escolaridade</div>
+					<div>{{card.degree}}</div>
+				</div>
+				<div class="item">
+					<div>Tipo de aula</div>
+					<div>{{card.lessonType}}</div>
+				</div>
+				<div class="item">
+					<div>Acompanhamento</div>
+					<div>
+						{% for subject in card.subjects %}
+						<span>{{subject}}</span>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="item">
+					<div>Desde</div>
+					<div id="date">{{card.createdAt}}</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</section>
+</main>
+{% endblock %}

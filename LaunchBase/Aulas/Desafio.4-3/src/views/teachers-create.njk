@@ -1,0 +1,66 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning - Cadastro de Professores</title>
+{% endblock %}
+
+{% block content %}
+<section class="cards">
+	<form class="card" method="post" action="/teachers">
+		<div class="avatar" id="avatar" style="background: url('https://source.unsplash.com/CQvy1NvIKZo/500x500') no-repeat center center / cover;">
+		</div>
+		<div class="card-details">
+			<div class="item">
+				<label for="avatarUrl">Avatar URL</label>
+				<input type="url" name="avatarUrl" id="avatarUrl">
+			</div>
+
+			<div class="item">
+				<label for="name">Nome Completo</label>
+				<input type="text" name="name" id="name">
+			</div>
+
+			<div class="itemDouble">
+				<div>
+					<label for="birthDate">Data de Nascimento</label>
+					<input type="date" name="birthDate" id="birthDate">
+				</div>
+				<div>
+					<label for="degree">Grau de Escolaridade</label>
+					<select name="degree" id="degree" required>
+						<option value="Ensino Médio Completo">Ensino Médio Completo</option>
+						<option value="Ensino Superior Completo">Ensino Superior Completo</option>
+						<option value="Mestrado">Mestrado</option>
+						<option value="Doutorado">Doutorado</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="item radio">
+				<label for="lessonType">Tipo de Aula</label>
+				<div>
+					<input type="radio" name="lessonType" id="presential" value="Presencial">
+					<label for="presential">Presencial</label>
+				</div>
+				<div>
+					<input type="radio" name="lessonType" id="remotely" value="à Distância">
+					<label for="remotely">à Distância</label>
+				</div>
+			</div>
+
+			<div class="item">
+				<label for="subjects">Matérias</label>
+				<input type="text" name="subjects" id="subjects">
+			</div>
+
+			<div class="item">
+				<input type="submit" value="Cadastrar">
+			</div>
+		</div>
+	</form>
+</section>
+<script src="script.js"></script>
+{% endblock %}
