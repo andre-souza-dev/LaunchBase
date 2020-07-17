@@ -1,0 +1,25 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning - Editar {{card.name}}</title>
+{% endblock %}
+
+{% block content %}
+<section class="cards">
+	<form class="card" method="post" action="/teachers/edit">
+		<div class="avatar" id="avatar" style="background: url('https://source.unsplash.com/CQvy1NvIKZo/500x500') no-repeat center center / cover;">
+		</div>
+		<div class="card-details">
+			{% include 'teachers/fields.njk' %}
+			<input type="hidden" name="id" value={{card.id}}>
+			<div class="item">
+				<input type="submit" value="Salvar Alterações">
+			</div>
+		</div>
+	</form>
+</section>
+<script src="script.js"></script>
+{% endblock %}

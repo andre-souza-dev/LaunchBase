@@ -1,0 +1,24 @@
+[
+	{
+		"id": 1,
+		"avatarUrl": "https://media-exp1.licdn.com/dms/image/C4E03AQFF2Faptc0drA/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=hpjMDe297TBWqd5IfMFEVNsLTxuRyYibjoBgZN17Ok8",
+		"name": "André Luiz Silva de Souza",
+		"birthDate": "1985-11-08T00:00:00.000Z",
+		"degree": "superior",
+		"lessonType": "D",
+		"subjects": ["React", "React Native", "NodeJS"],
+		"createdAt": "2020-07-14T21:40:55.772Z",
+		"ip": "::1"
+	},
+	{
+		"id": 2,
+		"avatarUrl": "https://andovercosmeticdentist.com/wp-content/uploads/SM-GotGap-Graphic.png",
+		"name": "Teste",
+		"birthDate": "2001-07-18T00:00:00.000Z",
+		"degree": "mestrado",
+		"lessonType": "P",
+		"subjects": ["Teste", "Teste2", "teste 3", "teste 4"],
+		"createdAt": "2020-07-17T19:10:58.837Z",
+		"ip": "localhost"
+	}
+]
