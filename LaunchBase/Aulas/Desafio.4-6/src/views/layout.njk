@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		{% block head %}{% endblock %}
+	</head>
+	<body>
+		<header class="navbar">
+			<a href="/"><img src="/logo.png" class="logo" /></a>
+			<nav>
+				<a href="/teachers" class={{teachers}}>Professores</a>
+				<a href="/students" class={{students}}>Estudantes</a>
+			</nav>
+		</header>
+{% block content %}{% endblock %}
+		<div class="spacer"></div>
+		<footer>
+			Todos os direitos reservados. Aulas e-Learning.
+		</footer>
+		<script src="/script.js"></script>
+	</body>
+</html>
