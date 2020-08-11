@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "avatarUrl": "https://images.unsplash.com/photo-1503676382389-4809596d5290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80",
+        "name": "Elizabeth Taylor Swift",
+        "birthDate": "2005-08-12",
+        "schoolYear": "medio2",
+        "email": "elizabeth@elearning.com.br",
+        "weeklyStudentLoad": "21",
+        "ip": "localhost"
+    }
+]

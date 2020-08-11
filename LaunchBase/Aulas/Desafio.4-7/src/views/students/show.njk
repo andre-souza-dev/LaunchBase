@@ -1,0 +1,48 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning - {{card.name}}</title>
+{% endblock %}
+
+{% block content %}
+<main>
+	<section class="cards">
+		<div class="card" id={{card.id}}>
+			<div class="avatar" style="background: url('{{card.avatarUrl}}')
+		no-repeat center center / cover;">
+			</div>
+			<div class="card-details">
+				<div class="item">
+					<div>Nome completo</div>
+					<div>{{card.name}}</div>
+				</div>
+				<div class="item">
+					<div>Aniversário</div>
+					<div id="date">{{card.birthDate}}</div>
+				</div>
+				<div class="item">
+					<div>Ano Escolar</div>
+					<div>{{card.schoolYear}}</div>
+				</div>
+				<div class="item">
+					<div>Email</div>
+					<div>{{card.email}}</div>
+				</div>
+				<div class="item">
+					<div>Carga horária semanal</div>
+					<div>{{card.weeklyStudentLoad}} horas</div>
+				</div>
+				
+				{% if card.editable %}
+				<div class="item">
+					<a href="/students/{{card.id}}/edit">Editar Dados do Aluno</a>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+</main>
+{% endblock %}
