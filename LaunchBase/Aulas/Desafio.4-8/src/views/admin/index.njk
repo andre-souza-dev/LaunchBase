@@ -1,0 +1,26 @@
+{% extends 'layout.njk' %}
+{% block head %}
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<title>FoodFy - Gerenciar Receitas</title>
+{% endblock %}
+{% block content %}
+<main class="admin">
+	<h1>Gerenciar Receitas</h1>
+		<a href="/admin/recipes/create">Nova Receita</a>
+	<section class="recipes">
+		{% for recipe in recipes %}
+			<div class="recipe" id={{recipe.id}}>
+				<div style="background-image: url({{recipe.image}})" id="img"></div>
+				<div>
+					<h1>{{recipe.title}}</h1>
+					<h2>{{recipe.author}}</h2>
+					<a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+</main>
+{% endblock %}

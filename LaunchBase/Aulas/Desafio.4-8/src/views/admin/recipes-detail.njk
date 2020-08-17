@@ -1,0 +1,45 @@
+{% extends 'layout.njk' %}
+{% block head %}
+<title>FoodFy - Gerenciar Receita de {{recipe.title}} por {{recipe.author}}</title>
+{% endblock %}
+{% block content %}
+<main class="admin">
+    <a href="/admin/recipes/{{recipe.id}}/edit">Editar Receita</a>
+<div class="recipe-detail" id={{recipe.id}}>
+	<img src="{{recipe.image}}" alt="{{recipe.title}}" />
+	<h1>{{recipe.title}}</h1>
+	<h2>por {{recipe.author}}</h2>
+	<div class="wrapper">
+		<div>
+		<h1>Ingredientes</h1>
+		<span id="button-ingredients" class="button">esconder</span>
+		</div>
+	<div id="ingredients" class="section">
+		<ul>
+			{% for ingredient in recipe.ingredients %}
+			<li>{{ingredient}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div>
+		<h1>Modo de preparo</h1>
+	<span id="button-preparation" class="button">mostrar</span></div>
+	<div id="preparation" class="section hide">
+			{% for step in recipe.preparation %}
+			<p>{{step}}</p>
+			{% endfor %}
+	</div>
+	{% if recipe.information %}
+	<div>
+		<h1>Informações adicionais</h1>
+		<span id="button-information" class="button">esconder</span>
+	</div>
+	<div id="information" class="section">
+		<p>{{recipe.information | striptags(true) | escape | nl2br }}</p>
+	</div>
+	{% endif %}
+	</div>
+</div>
+</section>
+</main>
+{% endblock %}

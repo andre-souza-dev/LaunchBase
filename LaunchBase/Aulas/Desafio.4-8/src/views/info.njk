@@ -1,0 +1,25 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+<title>FoodFy</title>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div>
+            <div class="page404">
+                <img src="/info.svg" alt="not-found" srcset="" height="100px" width="100px"/>
+                <div class="wrapper">
+                    <h2>
+                        {{message}}
+                    </h2>
+                    <p style="text-align: center">
+                        <button onClick="history.go(-1)" class="link404">volte para a página anterior
+            </button>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

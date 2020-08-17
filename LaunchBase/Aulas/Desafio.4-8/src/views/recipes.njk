@@ -1,0 +1,19 @@
+{% extends 'layout.njk' %}
+{% block head %}
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<title>FoodFy - Receitas</title>
+{% endblock %}
+{% block content %}
+<section class="recipes">
+	{% for recipe in recipes %}
+		<div class="recipe" id={{recipe.id}}>
+			<div style="background-image: url('{{recipe.image}}')" id="img"></div>
+			<h1>{{recipe.title}}</h1>
+			<h2>{{recipe.author}}</h2>
+		</div>
+	{% endfor %}
+</section>
+{% endblock %}

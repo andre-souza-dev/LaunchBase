@@ -34,7 +34,7 @@
 - [x] 5. [Desafio 4.5 - HTTP: PUT e DELETE](/LaunchBase/Aulas/Desafio.4-5)
 - [x] 6. [Desafio 4.6 - Listagem de professores](/LaunchBase/Aulas/Desafio.4-6)
 - [x] 7. [Desafio 4.7 - Estruturando estudantes](/LaunchBase/Aulas/Desafio.4-7)
-- [ ] 8. Desafio 4.8 - Administração do Foodfy (Área administrativa do Foodfy)
+- [x] 8. [Desafio 4.8 - Administração do Foodfy (Área administrativa do Foodfy)](/LaunchBase/Aulas/Desafio.4-8)
 
 ## Módulo 5 - Persistindo dados da aplicação
 

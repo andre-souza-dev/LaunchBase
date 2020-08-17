@@ -1,0 +1,77 @@
+{% extends 'layout.njk' %}
+{% block head %}
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+<title>FoodFy - Receita de {{recipe.title}} por {{recipe.author}}</title>
+{% endblock %}
+{% block content %}
+<main class="admin">
+    <div class="buttons">
+        <button form="delete" type="submit">Deletar</button>
+        <button form="save" type="submit">Salvar Receita</button>
+    </div>
+<div class="recipe-detail" id={{recipe.id}}>
+	<div style="background-image: url('{{recipe.image}}')" id="image-display"></div>
+	<form action="/admin/recipes/{{recipe.id}}/?_method=PUT" method="post" id="save">
+        <div class="item">
+            <label for="image">Imagem da Receita</label>
+            <input type="url" value="{{recipe.image}}" id="image" name="image" />
+        </div>
+        <div class="item">
+            <label for="title">Título</label>
+            <input type="text" value="{{recipe.title}}" id="title" name="title" />
+        </div>
+        <div class="item">
+            <label for="author">Autor</label>
+            <input type="text" value="{{recipe.author}}" id="author" name="author" readonly/>
+        </div>
+        
+        <div id="ingredients" class="item">
+            <p>Ingredientes</p>
+            {% for ingredient in recipe.ingredients %}
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" value="{{ingredient}}" placeholder="Ingrediente" />
+            </div>
+            {% endfor %}
+        </div>
+        <button type="button" class="add-input" name="ingredient">Adicionar Ingrediente</button>
+        
+        <div id="preparation" class="item">
+            <p>Preparação</p>
+            {% for step in recipe.preparation %}
+            <div class="step">
+                <input type="text" name="preparation[]" value="{{step}}" placeholder="Passo" />
+            </div>
+            {% endfor %}
+        </div>
+        <button type="button" class="add-input" name="step">Aicionar novo passo</button>
+        
+        <div class="item">
+            <label for="information">Informações adicionais</label>
+            <textarea rows="10" value="{{recipe.information}}" id="information" name="information"> {{recipe.information}} </textarea>
+        </div>
+    </form>
+        <form action="/admin/recipes/{{recipe.id}}/?_method=DELETE" method="post" id="delete">
+	</div>
+</div>
+</main>
+<script>
+    const imageDisplayTag = document.querySelector("#image-display");
+    const imageUrlInput = document.querySelector("#image");
+    
+    imageUrlInput.addEventListener('change',(event)=>{
+        if(imageUrlInput.validity.valid)
+            fetch(imageUrlInput.value).then((response)=>{
+                if(response.ok)
+                    imageDisplayTag.style = `background-image: url('${imageUrlInput.value}')`;
+            })
+    })
+
+    document.querySelector('form#delete').addEventListener('submit',(event)=>{
+    if(!confirm('Deseja realmente apagar esta receita?'))
+        event.preventDefault();
+    })
+</script>
+{% endblock %}

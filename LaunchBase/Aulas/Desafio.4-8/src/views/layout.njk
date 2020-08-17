@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		{% block head %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			<a href="/"><img src="/logo.png" class="logo" /></a>
+			<nav>
+				<a href="/about/">Sobre</a><a href="/recipes">Receitas</a>
+				<a href="/admin/recipes">Gerenciar Receitas</a>
+			</nav>
+		</header>
+{% block content %}{% endblock %}
+		<div class="spacer"></div>
+		<footer>
+			Todos os direitos reservados. Receitas FoodFy.
+		</footer>
+		<script src="/script.js"></script>
+	</body>
+</html>

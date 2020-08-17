@@ -1,0 +1,68 @@
+{% extends 'layout.njk' %}
+{% block head %}
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+<title>FoodFy - Receita de {{recipe.title}} por {{recipe.author}}</title>
+{% endblock %}
+{% block content %}
+<main class="admin">
+    <div class="buttons">
+        <div></div>
+        <button form="save" type="submit">Adicionar Receita</button>
+    </div>
+<div class="recipe-detail" id={{recipe.id}}>
+	<div style="background-image: url('https://images.unsplash.com/photo-1547516508-4c1f9c7c4ec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1359&q=80')" id="image-display"></div>
+	<form action="/admin/recipes" method="post" id="save">
+        <div class="item">
+            <label for="image">Imagem da Receita</label>
+            <input type="url" id="image" name="image" />
+        </div>
+        <div class="item">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" />
+        </div>
+        <div class="item">
+            <label for="author">Autor</label>
+            <input type="text" id="author" name="author" />
+        </div>
+        
+        <div id="ingredients" class="item">
+            <p>Ingredientes</p>
+            <div class="ingredient">
+                <input type="text" name="ingredients[]" placeholder="Ingrediente" />
+            </div>
+        </div>
+        <button type="button" class="add-input" name="ingredient">Adicionar Ingrediente</button>
+        
+        <div id="preparation" class="item">
+            <p>Preparação</p>
+            <div class="step">
+                <input type="text" name="preparation[]" placeholder="Passo" />
+            </div>
+
+        </div>
+        <button type="button" class="add-input" name="step">Aicionar novo passo</button>
+        
+        <div class="item">
+            <label for="information">Informações adicionais</label>
+            <textarea rows="10" id="information" name="information"> {{recipe.information}} </textarea>
+        </div>
+    </form>
+	</div>
+</div>
+</main>
+<script>
+    const imageDisplayTag = document.querySelector("#image-display");
+    const imageUrlInput = document.querySelector("#image");
+    
+    imageUrlInput.addEventListener('change',(event)=>{
+        if(imageUrlInput.validity.valid)
+            fetch(imageUrlInput.value).then((response)=>{
+                if(response.ok)
+                    imageDisplayTag.style = `background-image: url('${imageUrlInput.value}')`;
+            })
+    })
+</script>
+{% endblock %}
