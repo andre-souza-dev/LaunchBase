@@ -38,7 +38,7 @@
 
 ## Módulo 5 - Persistindo dados da aplicação
 
-- [ ] 1. Desafio 5.1 - Refatorando aplicação e configurando o BD
+- [x] 1. [Desafio 5.1 - Refatorando aplicação e configurando o BD](/LaunchBase/Aulas/Desafio.5-1)
 - [ ] 2. Desafio 5.2 - Interagindo com o BD
 - [ ] 3. Desafio 5.3 - Relacionamentos e filtros no BD
 - [ ] 4. Desafio 5.4 - Paginação de resultados no BD
