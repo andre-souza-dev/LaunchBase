@@ -9,8 +9,8 @@ type Find = {
 export default {
 	all(ip: string, callback: Function) {
 		const query =
-			"SELECT * FROM students WHERE ip=$1 OR ip='readonly ORDER BY name ASC";
-		db.students.query(query, [ip], (error, response) => {
+			"SELECT * FROM students WHERE ip=$1 OR ip='readonly' ORDER BY name ASC";
+		db.query(query, [ip], (error, response) => {
 			if (error) throw new Error(`Database error on ALL: ${error}`);
 
 			const data = response.rows;
@@ -46,7 +46,7 @@ export default {
 			weekly_load,
 			ip,
 		];
-		db.students.query(query, data, (error, response) => {
+		db.query(query, data, (error, response) => {
 			if (error) throw new Error(`Database error on CREATE: ${error}`);
 
 			const id = Number(response.rows[0].id);
@@ -57,7 +57,7 @@ export default {
 		const query = `SELECT * FROM students
             WHERE id=$1 AND ip=$2 OR ip='readonly'`;
 
-		db.students.query(query, [id, ip], (error, response) => {
+		db.query(query, [id, ip], (error, response) => {
 			if (error) throw new Error(`Database error on FIND: ${error}`);
 			const data = response.rows[0];
 			callback(data);
@@ -94,7 +94,7 @@ export default {
 			id,
 			ip,
 		];
-		db.students.query(query, data, (error, response) => {
+		db.query(query, data, (error, response) => {
 			if (error) throw `Database error on UPDATE: ${error}`;
 			callback(response.rows);
 		});
@@ -103,7 +103,7 @@ export default {
 		const query = `DELETE FROM students
             WHERE id=$1 AND ip=$2`;
 
-		db.students.query(query, [id, ip], (error, response) => {
+		db.query(query, [id, ip], (error, response) => {
 			if (error) throw new Error(`Database error on DELETE: ${error}`);
 			const data = response.rows;
 			callback(data);

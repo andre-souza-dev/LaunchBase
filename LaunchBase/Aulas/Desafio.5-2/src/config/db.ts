@@ -8,25 +8,11 @@ const poolConfig = process.env.DATABASE_URL
 			password: "postgres",
 			host: "localhost",
 			port: 5432,
-			database: "",
+			database: "e_learning",
 			ssl: false,
 	  };
 
-const db = process.env.DATABASE_URL
-	? {
-			teachers: new Pool(poolConfig),
-			students: new Pool(poolConfig),
-	  }
-	: {
-			teachers: new Pool({
-				...poolConfig,
-				database: "my_teachers",
-			}),
-			students: new Pool({
-				...poolConfig,
-				database: "my_students",
-			}),
-	  };
+const db = new Pool(poolConfig);
 
 export default db;
 
@@ -39,7 +25,7 @@ function transformPostgreURL(postgreURL: string) {
 		password: auth[1] || "postgres",
 		host: params.hostname || "localhost",
 		port: Number(params.port) || 5432,
-		database: params.pathname ? params.pathname.split("/")[1] : "",
+		database: params.pathname ? params.pathname.split("/")[1] : "e_learning",
 		ssl: true,
 	};
 
