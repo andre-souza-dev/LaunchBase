@@ -1,0 +1,13 @@
+<script>
+	const deleteForm = document.querySelector("#delete");
+	const inputTagName = document.querySelector("#name");
+	const typeOfUser = inputTagName.dataset.type;
+	const nameOfUser = inputTagName.value;
+	console.log(deleteForm);
+	deleteForm.addEventListener("submit", (event) => {
+		const deleteUser = confirm(
+			`Deseja realmente apagar o ${typeOfUser} ${nameOfUser}`
+		);
+		if (!deleteUser) event.preventDefault();
+	});
+</script>

@@ -1,0 +1,81 @@
+			<div class="item">
+				<label for="avatar_url">Avatar URL</label>
+				<input type="url" name="avatar_url" id="avatarUrl" value="{{card.avatar_url}}">
+			</div>
+
+			<div class="item">
+				<label for="name">Nome Completo</label>
+				<input type="text" name="name" id="name" value="{{card.name}}" data-type="aluno" >
+			</div>
+
+			<div class="item-double">
+				<div>
+					<label for="birth_date">Data de Nascimento</label>
+					<input type="date" name="birth_date" id="birthDate" value="{{card.birth_date}}">
+				</div>
+				<div>
+					<label for="school_term">Ano Escolar</label>
+					<select name="school_term" id="schoolTerm" required>
+						<option value="fundamental5" 
+						{% if card.school_term == 'fundamental5' %}
+						selected
+						{% endif %}>5º ano do ensino fundamental I
+						</option>
+
+						<option value="fundamental6" 
+						{% if card.school_term == 'fundamental6' %}
+						selected
+						{% endif %}>6º ano do ensino fundamental II
+						</option>
+						
+						<option value="fundamental7" 
+						{% if card.school_term == 'fundamental7' %}
+						selected
+						{% endif %}>7º ano do ensino fundamental II
+						</option>
+						
+						<option value="fundamental8" 
+						{% if card.school_term == 'fundamental8' %}
+						selected
+						{% endif %}>8º ano do ensino fundamental II
+						</option>
+						
+						<option value="fundamental9" 
+						{% if card.school_term == 'fundamental9' %}
+						selected
+						{% endif %}>9º ano do ensino fundamental II
+						</option>
+						
+						<option value="medio1" 
+						{% if card.school_term == 'medio1' %}
+						selected
+						{% endif %}>1º ano do ensino médio
+						</option>
+						
+						<option value="medio2" 
+						{% if card.school_term == 'medio2' %}
+						selected
+						{% endif %}>2º ano do ensino médio
+						</option>
+						
+						<option value="medio3" 
+						{% if card.school_term == 'medio3' %}
+						selected
+						{% endif %}>3º ano do ensino médio
+						</option>
+						
+					</select>
+				</div>
+			</div>
+
+			<div class="item-double">
+				<div>
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" value="{{card.email}}">
+				</div>
+
+				<div>
+					<label for="weekly_load">Carga horária semanal (horas)</label>
+					<input type="number" name="weekly_load" id="weeklyLoad" value="{{card.weekly_load}}">
+				</div>
+			</div>

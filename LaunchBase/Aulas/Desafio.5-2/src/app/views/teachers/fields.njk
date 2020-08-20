@@ -1,0 +1,60 @@
+			<div class="item">
+				<label for="avatar_url">Avatar URL</label>
+				<input type="url" name="avatar_url" id="avatarUrl" value="{{card.avatar_url}}">
+			</div>
+
+			<div class="item">
+				<label for="name">Nome Completo</label>
+				<input type="text" name="name" id="name" value="{{card.name}}" data-type="professor">
+			</div>
+
+			<div class="item-double">
+				<div>
+					<label for="birth_date">Data de Nascimento</label>
+					<input type="date" name="birth_date" id="birthDate" value={{card.birth_date}}>
+				</div>
+				<div>
+					<label for="education_level">Grau de Escolaridade</label>
+					<select name="education_level" id="education_level" required>
+						<option value="medio" 
+						{% if card.education_level == 'medio' %}
+						selected
+						{% endif %}>Ensino Médio Completo</option>
+						<option value="superior"
+						{% if card.education_level == 'superior' %}
+						selected
+						{% endif %}>Ensino Superior Completo</option>
+						<option value="mestrado"
+						{% if card.education_level == 'mestrado' %}
+						selected
+						{% endif %}>Mestrado</option>
+						<option value="doutorado"
+						{% if card.education_level == 'doutorado' %}
+						selected
+						{% endif %}>Doutorado</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="item radio">
+				<label for="lesson_type">Tipo de Aula</label>
+				<div>
+					<input type="radio" name="lesson_type" id="presential" value="P"
+					{% if card.lesson_type == 'P' %}
+					checked
+					{% endif %}>
+					<label for="presential">Presencial</label>
+				</div>
+				<div>
+					<input type="radio" name="lesson_type" id="remotely" value="D"
+					{% if card.lesson_type == 'D' %}
+					checked
+					{% endif %}>
+					<label for="remotely">à Distância</label>
+				</div>
+			</div>
+
+			<div class="item">
+				<label for="subjects_taught">Matérias</label>
+				<input type="text" name="subjects_taught" id="subjects" value="{{card.subjects_taught}}">
+			</div>

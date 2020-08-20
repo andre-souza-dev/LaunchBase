@@ -1,0 +1,51 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning</title>
+{% endblock %}
+
+{% block content %}
+<section class="home-description">
+	<div>
+		<h1>Aprenda sem sair de casa</h1>
+		<h2>
+			Aulas on-line e presenciais com os melhores professores do Brasil.
+		</h2>
+	</div>
+	<img src="/student.png" alt="" />
+</section>
+<main>
+	<h1>Alunos utilizando a plataforma e-Learning</h1>
+	<section class="table-container">
+		<a href="/students/create">Cadastre-se como aluno</a>
+		<table>
+			<thead>
+				<tr>
+					<th>Aluno</th>
+					<th>Email</th>
+					<th>Ano Escolar</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for card in cards %}
+				<tr>
+					<td>
+						<span style="background-image: url('{{card.avatar_url}}')"></span>
+						{{card.name}}
+						</td>
+						<td>{{card.email}}</td>
+						<td>{{card.school_term}}</td>
+						<td>
+							<a href="/students/{{card.id}}">ver mais</a>
+						</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+</main>
+{% endblock %}
