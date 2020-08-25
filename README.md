@@ -40,7 +40,7 @@
 
 - [x] 1. [Desafio 5.1 - Refatorando aplicação e configurando o BD](/LaunchBase/Aulas/Desafio.5-1)
 - [x] 2. [Desafio 5.2 - Interagindo com o BD](/LaunchBase/Aulas/Desafio.5-2)
-- [ ] 3. Desafio 5.3 - Relacionamentos e filtros no BD
+- [x] 3. [Desafio 5.3 - Relacionamentos e filtros no BD](/LaunchBase/Aulas/Desafio.5-3)
 - [ ] 4. Desafio 5.4 - Paginação de resultados no BD
 - [ ] 5. Desafio 5.5 - Persistindo dados no Foodfy (Criação de um banco de dados para Foodfy)
 
