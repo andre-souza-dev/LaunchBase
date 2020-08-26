@@ -1,0 +1,66 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	/>
+	<title>e-Learning</title>
+{% endblock %}
+
+{% block content %}
+<section class="home-description" id="teachersection" >
+	<div>
+		<h1>Ensine através da internet</h1>
+		<h2>
+			Torne-se um profissional reconhecido na área da educação oferecendo aulas on-line e presenciais.
+		</h2>
+	</div>
+	<img src="/teacher.png" alt="" />
+</section>
+<main>
+	<h1>Professores utilizando a plataforma e-Learning</h1>
+	<section class="table-container">
+		<div class="header">
+			<a href="/teachers/create">Cadastre-se como Professor</a>
+			<form action="/teachers#filterform" method="get" id="filterform">
+				<input type="text" name="filter" id="filtervalue" value="{{filter}}" placeholder="Nome ou Acompanhamento">
+				<input type="hidden" name="page" id="pagevalue" value={{pagination.page}}>
+				<input type="hidden" name="limit" id="limitvalue" value={{pagination.limit}}>
+				<button type="submit">filtrar</button>
+			</form>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Professor</th>
+					<th>Acompanhamento</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for card in cards %}
+				<tr>
+					<td>
+						<span style="background-image: url('{{card.avatar_url}}')"></span>
+						{{card.name}}
+						</td>
+						<td>{% for subject in card.subjects_taught%}
+							<span>{{subject}}</span>
+							{% endfor %}
+						</td>
+						<td>
+							<a href="/teachers/{{card.id}}">ver mais</a>
+						</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<div id="pagination"
+			data-page={{pagination.page}}
+			data-limit={{pagination.limit}}
+			data-total-pages={{pagination.totalPages}}
+			data-filter={{filter}}
+		></div>
+	</section>
+</main>
+{% endblock %}
