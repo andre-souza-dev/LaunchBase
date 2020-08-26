@@ -1,0 +1,20 @@
+{% extends 'layout.njk' %}
+{% block head %}
+	<title>e-Learning - Cadastro de Professores</title>
+{% endblock %}
+
+{% block content %}
+<section class="cards">
+	<form class="card" method="post" action="/teachers">
+		<div class="avatar" id="avatar" style="background: url('https://source.unsplash.com/CQvy1NvIKZo/500x500') no-repeat center center / cover;">
+		</div>
+		<div class="card-details">
+			{% include 'teachers/fields.njk' %}
+
+			<div class="item">
+				<input type="submit" value="Cadastrar">
+			</div>
+		</div>
+	</form>
+</section>
+{% endblock %}
